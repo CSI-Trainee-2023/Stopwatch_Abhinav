@@ -1,0 +1,50 @@
+body {
+     color: grey;
+     background-image: url(background\ image.jpg);
+     background-size: cover;
+}
+.watch {
+    text-align: center;
+    font-size: 60px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+.button {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.lapbutton {
+    background-color: grey;
+    border: none;
+    font: status-bar;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    margin-left: 40px;
+    border-radius: 10px;
+}
+.startbutton {
+    background-color: grey;
+    border: none;
+    font: status-bar;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    margin-left: 12px;
+    border-radius: 10px;
+}
+.stopwatch {
+    border: 5px solid green;
+    display: inline-block;
+}
+#timer{
+    font-size: xx-large;
+    text-align: center;
+}
