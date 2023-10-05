@@ -11,10 +11,16 @@
         Stop Watch
     </div>
         <div class="stopwatch">
-        <div id="count">00:00:00</div>
+        <div id="count">
+            <span id="hr">00</span>
+            <span.colon>:</span.colon>
+            <span id="min">00</span>
+            <span.colon>:</span.colon>
+            <span id="sec">00</span>
+        </div>
         <div class="button">
             <button id="startbutton" onclick="pre()">Start</button>
-            <button id="lapbutton" onclick="lap()">Lap</button>
+            <button id="button2" onclick="lapbutton()">Lap</button>
         </div>
         <div class="laps">
         <h4 class="lap1"></h4>
@@ -24,6 +30,9 @@
         <h4 class="lap5"></h4>
         </div>
         </div>
+        <div id="laps">
+            <ul id="lapRecord"></ul>
+         </div>
         <script src="stopwatch.js"></script>
 </body>
 </html>

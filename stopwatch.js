@@ -48,7 +48,9 @@ function timer() {
     {
         hr="0" +hr;
     }
-    count.innerHTML = hr + " : " +min+" : "+sec;
+        document.getElementById("sec").innerHTML=sec;
+        document.getElementById("min").innerHTML=min;
+        document.getElementById("hr").innerHTML=hr;
     setTimeout("timer()",1000);
 }
 }
@@ -56,3 +58,16 @@ function stop(){
     isStart=false;
     document.getElementById("startbutton").innerHTML="Start";
 }
+ function lapbutton()
+{
+      if(isStart==true){
+        lap();
+      }
+      else{
+        reset();
+      }
+}
+function lap() {
+     
+}
+ 
