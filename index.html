@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>StopWatch</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,10 +11,10 @@
         Stop Watch
     </div>
         <div class="stopwatch">
-        <div class="timer">00:00:00</div>
+        <div id="count">00:00:00</div>
         <div class="button">
-            <button class="startbutton">Start</button>
-            <button class="lapbutton">Lap</button>
+            <button id="startbutton" onclick="pre()">Start</button>
+            <button id="lapbutton" onclick="lap()">Lap</button>
         </div>
         <div class="laps">
         <h4 class="lap1"></h4>
@@ -24,5 +24,6 @@
         <h4 class="lap5"></h4>
         </div>
         </div>
+        <script src="stopwatch.js"></script>
 </body>
 </html>
