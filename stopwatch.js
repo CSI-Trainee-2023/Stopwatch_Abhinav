@@ -102,14 +102,16 @@ function lap() {
     document.getElementById("button2").innerHTML="Lap";
  }
  document.addEventListener('keydown',(event)=>{
+    event.preventDefault();
     if(event.ctrlKey){
-        if(event.key=== 'p') start();
+        if(event.key=== 's') start();
         if(event.key=== 'x') stop();
         if(event.key=== 'r') reset();
         if(event.key=== 'l') lap();
 
     }
 });
-function clear() {
-     document.getElementById("flag").innerHTML=" ";
+function erase() {
+    console.log("hi");
+    document.getElementById("flag").innerHTML="";
 }
