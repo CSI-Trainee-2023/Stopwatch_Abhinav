@@ -26,6 +26,8 @@ cursor: pointer;
 #count{
     font-size: 5rem;
     margin-bottom: 10px;
+    display: flex;    
+    flex-wrap: wrap;
 }
 .watch{
     text-align: center;
