@@ -1,3 +1,4 @@
+var msec=0;
 var hr=0;
 var min=0;
 var sec=0;
@@ -13,6 +14,7 @@ function pre() {
     else{
         stop();
         console.log("stop");
+        document.getElementById("button2").innerHTML="Reset";
     }
 }
 function start() {
@@ -22,10 +24,16 @@ function start() {
 }  
 function timer() {
     if(isStart==true){
-    sec++;
+    msec++;
+    msec=parseInt(msec);
     sec=parseInt(sec);
     min=parseInt(min);
     hr=parseInt(hr);
+    if(msec==100)
+    {
+        msec=0;
+        sec++;
+    }
     if(sec==60)
     {
         sec=0;
@@ -35,6 +43,10 @@ function timer() {
     {
         min=0;
         hr++;
+    }
+    if(msec<10)
+    {
+        msec="0" +msec;
     }
     if(sec<10)
     {
@@ -48,15 +60,17 @@ function timer() {
     {
         hr="0" +hr;
     }
+        document.getElementById("msec").innerHTML=msec;
         document.getElementById("sec").innerHTML=sec;
         document.getElementById("min").innerHTML=min;
         document.getElementById("hr").innerHTML=hr;
-    setTimeout("timer()",1000);
+    setTimeout("timer()",10);
 }
 }
 function stop(){
     isStart=false;
     document.getElementById("startbutton").innerHTML="Start";
+    
 }
  function lapbutton()
 {
@@ -68,6 +82,34 @@ function stop(){
       }
 }
 function lap() {
+     let list3=document.getElementById("flag");
+     
+     let item=document.createElement("li"); 
+     item.textContent=hr+":"+min+":"+sec+":"+msec;
+     list3.appendChild(item); 
      
 }
- 
+ function reset(){
+    isStart=false;
+    hr=0;
+    min=0;
+    sec=0;
+    msec=0;
+    document.getElementById("sec").innerHTML="00";
+    document.getElementById("min").innerHTML="00";
+    document.getElementById("hr").innerHTML="00";
+    document.getElementById("msec").innerHTML="00";
+    document.getElementById("button2").innerHTML="Lap";
+ }
+ document.addEventListener('keydown',(event)=>{
+    if(event.ctrlKey){
+        if(event.key=== 'p') start();
+        if(event.key=== 'x') stop();
+        if(event.key=== 'r') reset();
+        if(event.key=== 'l') lap();
+
+    }
+});
+function clear() {
+     document.getElementById("flag").innerHTML=" ";
+}

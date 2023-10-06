@@ -34,6 +34,27 @@ cursor: pointer;
 *{
     box-sizing: border-box;
 }
-.laps{
-    border: 5px solid white;
+.laps {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: xx-large;
+}
+#clear{
+    background-color: lightgray;
+margin: 10px 5px;
+padding: 10px 20px 10px 20px;
+font-size: 1rem;
+border-radius: 4px;
+border: none;
+cursor: pointer;
+}
+.lapheading{
+    font-size: xx-large;
+    text-align: center;
+}
+.lap{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
